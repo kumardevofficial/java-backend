@@ -34,7 +34,7 @@ The Vercel frontend cannot reach a developer's `localhost`. Deploy this API sepa
 | `FRONTEND_ORIGINS` | No | Comma-separated exact frontend origins; defaults to `http://localhost:5173`. Use the explicit list above in Vercel. |
 | `MONGODB_URI` | Yes | Private MongoDB connection URI. |
 | `JWT_SECRET` or `AUTH_SECRET` | Yes | Random secret, minimum 32 characters; `AUTH_SECRET` is a backward-compatible alias. Use a different value per environment. |
-| `JWT_EXPIRES_IN` | No | `15m`. |
+| `JWT_EXPIRES_IN` | No | `6h`; the authentication cookie uses the same lifetime. Set this to `6h` in Vercel Production. |
 | `AUTH_COOKIE_NAME` | No | `javaprep_access`. |
 | `AUTH_COOKIE_SAME_SITE` | No | `lax` locally and `none` in production. Production cookies are Secure. |
 | `GEMINI_API_KEY` | No | Server-only key; growth analysis returns `AI_NOT_CONFIGURED` when omitted. |

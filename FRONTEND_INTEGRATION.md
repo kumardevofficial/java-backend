@@ -6,8 +6,8 @@ Use this document and `README.md` as the backend source of truth when integratin
 
 - Local API origin: `http://localhost:4000`
 - Set the frontend's public Vite value to `VITE_API_BASE_URL=http://localhost:4000` locally.
-- Deployed frontend: `https://java-backend-interview-mcq.vercel.app/`. It cannot call a developer's localhost. After backend deployment, set Vercel's `VITE_API_BASE_URL` to the deployed API origin and redeploy.
-- Backend `FRONTEND_ORIGINS` must list exact allowed origins, comma-separated. For local and deployed frontend use `https://java-backend-interview-mcq.vercel.app,http://localhost:5173,http://127.0.0.1:5173`.
+- Deployed frontend: `https://java-learning-frontend.vercel.app/`. It cannot call a developer's localhost. After backend deployment, set Vercel's `VITE_API_BASE_URL` to the deployed API origin and redeploy.
+- Backend `FRONTEND_ORIGINS` must list exact allowed origins, comma-separated. For local and deployed frontend use `https://java-learning-frontend.vercel.app,http://localhost:5173,http://127.0.0.1:5173`.
 - Use `fetch(url, { credentials: 'include' })` or Axios `{ withCredentials: true }` on auth and authenticated requests. The API sets an HTTP-only cookie; do not store or access a token in localStorage.
 - Never expose MongoDB URI, JWT secret, or Gemini key in frontend code or any `VITE_` variable.
 
